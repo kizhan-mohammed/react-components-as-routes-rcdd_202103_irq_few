@@ -6,18 +6,14 @@ import Login from './Login'
 import Navbar from './Navbar'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-const Home = () => {
-  return (
+ReactDOM.render((
+  <Router>
     <div>
-  <Navbar />
+      <Navbar />
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/login" component={Login} />
     </div>
-  );
-};
-
-ReactDOM.render(
-  <Home />,
+  </Router>),
   document.getElementById('root')
 );
